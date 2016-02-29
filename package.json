@@ -1,0 +1,22 @@
+{
+  "name": "iotacss-size",
+  "version": "0.1.0",
+  "description": "Size utility for iotaCSS",
+  "main": "_utilities.size.scss",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:iotacss/utilities.size.git"
+  },
+  "keywords": [
+    "iotacss",
+    "css",
+    "bem",
+    "oocss"
+  ],
+  "dependencies": {
+    "iotacss-default": "0.1.0",
+    "iotacss-breakpoint": "0.1.0",
+    "iotacss-column": "0.1.0"
+  },
+  "author": "Dimitris Psaropoulos <info@harby.me>"
+}

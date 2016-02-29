@@ -1,0 +1,59 @@
+// Size Utility
+
+
+
+
+// Dependencies
+//   Settings.Default
+//   Settings.Column
+//   Settings.Breakpoint
+
+
+
+
+$iota-size      : true;
+$iota-size--res : false !default;
+
+
+
+
+@each $column-size in $iota-column-sizes {
+
+  @for $i from 1 through $column-size {
+
+    .#{$iota-utility-namespace}#{$i}\/#{$column-size} {
+      width: ((100 / $column-size) * $i) * 1% !important;
+    }
+
+  }
+
+}
+
+
+
+
+// Responsive Size Utilities
+
+@if ($iota-size--res == true) {
+
+  @each $name, $size in $iota-breakpoint-sizes {
+
+    @media #{$size} {
+
+      @each $column-size in $iota-column-sizes {
+
+        @for $i from 1 through $column-size {
+
+          .#{$iota-utility-namespace}#{$i}\/#{$column-size}\@#{$name} {
+            width: ((100 / $column-size) * $i) * 1% !important;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
