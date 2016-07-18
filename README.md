@@ -20,7 +20,7 @@ npm install --save iotacss-size
 ### Options ###
 
 ```
-$iotacss-size--res : false !default;
+$iota-size--res : false !default;
 ```
 
 
