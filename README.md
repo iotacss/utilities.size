@@ -6,21 +6,21 @@ The size utility contains a set of classes for setting width in elements or grid
 ### Installation ###
 
 ```
-npm install --save iotacss-size
+npm install --save iotacss-utils-size
 ```
-
-
-### Dependencies ###
-
-* [Settings.Default](https://github.com/iotacss/settings.default)
-* [Settings.Column](https://github.com/iotacss/settings.column)
-* [Settings.Breakpoint](https://github.com/iotacss/settings.breakpoint)
 
 
 ### Options ###
 
 ```
-$iota-size--res : false !default;
+$iota-utils-size-namespace    : '' !default;
+
+$iota-utils-size-columns      : $iota-global-columns !default;
+
+$iota-utils-size-delimiter    : \/ !default;
+
+$iota-utils-size-res          : false !default;
+$iota-utils-size-breakpoints  : $iota-global-breakpoints !default;
 ```
 
 

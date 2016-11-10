@@ -3,25 +3,34 @@
 
 
 
-// Dependencies
-//   Settings.Default
-//   Settings.Column
-//   Settings.Breakpoint
+$iota-utils-size              : true;
+
+$iota-utils-size-namespace    : '' !default;
+
+$iota-utils-size-columns      : $iota-global-columns !default;
+
+$iota-utils-size-delimiter    : \/ !default;
+
+$iota-utils-size-res          : false !default;
+$iota-utils-size-breakpoints  : $iota-global-breakpoints !default;
 
 
 
 
-$iota-size      : true;
-$iota-size--res : false !default;
+// Helper Local Variables
+
+$iota-utils-size-var-size: $iota-global-utilities-namespace + $iota-utils-size-namespace;
 
 
 
 
-@each $column-size in $iota-column-sizes {
+// Size Utilities
+
+@each $column-size in $iota-utils-size-columns {
 
   @for $i from 1 through $column-size {
 
-    .#{$iota-utility-namespace}#{$i}\/#{$column-size} {
+    .#{$iota-utils-size-var-size + $i + $iota-utils-size-delimiter + $column-size} {
       width: ((100 / $column-size) * $i) * 1% !important;
     }
 
@@ -34,17 +43,17 @@ $iota-size--res : false !default;
 
 // Responsive Size Utilities
 
-@if ($iota-size--res == true) {
+@if ($iota-utils-size-res == true) {
 
-  @each $name, $size in $iota-breakpoint-sizes {
+  @each $breakpoint-name, $breakpoint-size in $iota-utils-size-breakpoints {
 
-    @media #{$size} {
+    @media #{$breakpoint-size} {
 
-      @each $column-size in $iota-column-sizes {
+      @each $column-size in $iota-utils-size-columns {
 
         @for $i from 1 through $column-size {
 
-          .#{$iota-utility-namespace}#{$i}\/#{$column-size}\@#{$name} {
+          .#{$iota-utils-size-var-size + $i + $iota-utils-size-delimiter + $column-size + $iota-global-breakpoint-separator + $breakpoint-name} {
             width: ((100 / $column-size) * $i) * 1% !important;
           }
 
