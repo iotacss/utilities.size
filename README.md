@@ -1,3 +1,5 @@
+**iotaCSS is now a monorepo and all individual repositories are part of it. Please open issues or PRs here: [https://github.com/iotacss/iotacss](https://github.com/iotacss/iotacss).**
+
 # Size Utility #
 
 The size utility contains a set of classes for setting width in elements or grid columns. The sizes created are based on the [Settings.Column](https://github.com/iotacss/settings.column).
